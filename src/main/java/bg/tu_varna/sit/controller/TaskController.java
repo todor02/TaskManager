@@ -1,4 +1,4 @@
-package bg.tu_varna.sit.controler;
+package bg.tu_varna.sit.controller;
 
 import bg.tu_varna.sit.model.Task;
 import bg.tu_varna.sit.service.TaskService;
