@@ -1,6 +1,7 @@
 package bg.tu_varna.sit.controller;
 
 import bg.tu_varna.sit.dto.TaskDTO;
+import bg.tu_varna.sit.exceptions.ResourceNotFoundException;
 import bg.tu_varna.sit.service.TaskService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

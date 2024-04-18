@@ -1,6 +1,7 @@
 package bg.tu_varna.sit.service.impl;
 
 import bg.tu_varna.sit.dto.TaskDTO;
+import bg.tu_varna.sit.exceptions.ResourceNotFoundException;
 import bg.tu_varna.sit.model.Task;
 import bg.tu_varna.sit.repository.TaskRepository;
 import bg.tu_varna.sit.service.TaskService;
@@ -70,6 +71,7 @@ public class TaskServiceImpl implements TaskService {
 
     @Override
     public void deleteTask(Long id) {
+        taskRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Task","id",id.toString()));
         taskRepository.deleteById(id);
     }
 }
